@@ -6,11 +6,12 @@ A full-stack application for predicting customer segments using K-Means clusteri
 
 ```text
 DS/
-├── Mall_Customers.csv                # Dataset
-├── app.py                            # Flask Backend
-├── requirements.txt                  # Python dependencies
-├── ml_final.py                       # ML Analysis script
-├── customer-segmentation-predictor/  # React Frontend (Vite)
+├── backend/                          # Flask Backend
+│   ├── Mall_Customers.csv            # Dataset
+│   ├── app.py                        # Main entry point
+│   ├── ml_final.py                   # ML Analysis script
+│   └── requirements.txt              # Python dependencies
+├── frontend/                         # React Frontend (Vite)
 │   ├── src/
 │   │   ├── components/
 │   │   │   ├── InputForm.jsx
@@ -28,15 +29,19 @@ Ensure you have Python and Node.js installed.
 
 ### 2. Setup and Run Backend
 1. Open a terminal in the `DS/` folder.
-2. (Optional) Activate your virtual environment:
+2. Navigate to the backend directory:
+   ```powershell
+   cd backend
+   ```
+3. (Optional) Activate your virtual environment:
    ```powershell
    .\venv\Scripts\activate
    ```
-3. Install dependencies:
+4. Install dependencies:
    ```powershell
    pip install -r requirements.txt
    ```
-4. Run the Flask server:
+5. Run the Flask server:
    ```powershell
    python app.py
    ```
@@ -46,7 +51,7 @@ The backend will run on `http://127.0.0.1:5000`.
 1. Open a new terminal in the `DS/` folder.
 2. Navigate to the frontend directory:
    ```powershell
-   cd customer-segmentation-predictor
+   cd frontend
    ```
 3. Install dependencies:
    ```powershell
